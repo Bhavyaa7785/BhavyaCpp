@@ -1,0 +1,27 @@
+#include <iostream>
+
+class NaturalSum {
+public:
+    // Default constructor
+    NaturalSum(int n = 0) : number(n) {}
+
+    // Function to calculate the sum of first n natural numbers
+    int sum() const {
+        return (number * (number + 1)) / 2;
+    }
+
+private:
+    int number;
+};
+
+int main() {
+    int n;
+
+    std::cout << "Enter a natural number: ";
+    std::cin >> n;
+
+    NaturalSum naturalSum(n);
+    std::cout << "The sum of the first " << n << " natural numbers is: " << naturalSum.sum() << std::endl;
+
+    return 0;
+}
